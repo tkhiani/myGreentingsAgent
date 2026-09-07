@@ -1,0 +1,41 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: agent
+
+metadata:
+  name: greeting-agent
+  version: 1.0.0
+
+agentCard:
+  name: Greeting Agent
+  version: 1.0.0
+  description: An AI agent that greets users based on the time of day (morning, afternoon, evening, night).
+
+container:
+  buildPath: .
+  port: 5000
+
+provides:
+  apis:
+    - name: greeting-agent
+      kind: a2a
+      ordId: customer.build:apiResource:greeting-agent-1be1f.greeting-agent:v1
+
+probes:
+  startup:
+    path: /.well-known/agent.json
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 18
+  liveness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3

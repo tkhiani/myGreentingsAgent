@@ -1,0 +1,358 @@
+{
+  "summary": {
+    "total": 63,
+    "passed": 63,
+    "failed": 0,
+    "score": 100.0
+  },
+  "sections": [
+    {
+      "name": "Structure Tests",
+      "marker": "structure",
+      "total": 31,
+      "passed": 31,
+      "failed": 0,
+      "skipped": 0,
+      "score": 100.0,
+      "tests": [
+        {
+          "name": "test_valid_frontmatter_returns_name_and_description",
+          "outcome": "passed",
+          "duration": 0.0025
+        },
+        {
+          "name": "test_invalid_frontmatter_missing_opening_fence",
+          "outcome": "passed",
+          "duration": 0.0005
+        },
+        {
+          "name": "test_invalid_frontmatter_missing_closing_fence",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_invalid_frontmatter_invalid_yaml",
+          "outcome": "passed",
+          "duration": 0.0007
+        },
+        {
+          "name": "test_invalid_frontmatter_missing_name",
+          "outcome": "passed",
+          "duration": 0.0006
+        },
+        {
+          "name": "test_invalid_frontmatter_missing_description",
+          "outcome": "passed",
+          "duration": 0.0006
+        },
+        {
+          "name": "test_invalid_frontmatter_non_string_name",
+          "outcome": "passed",
+          "duration": 0.0009
+        },
+        {
+          "name": "test_invalid_frontmatter_non_string_description",
+          "outcome": "passed",
+          "duration": 0.0008
+        },
+        {
+          "name": "test_get_load_tool_with_valid_skill",
+          "outcome": "passed",
+          "duration": 0.001
+        },
+        {
+          "name": "test_get_load_tool_with_invalid_skill",
+          "outcome": "passed",
+          "duration": 0.0009
+        },
+        {
+          "name": "test_actual_skills_load_without_error",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_dot_dot_traversal",
+          "outcome": "passed",
+          "duration": 0.0012
+        },
+        {
+          "name": "test_multi_level_traversal",
+          "outcome": "passed",
+          "duration": 0.0006
+        },
+        {
+          "name": "test_absolute_path_injection",
+          "outcome": "passed",
+          "duration": 0.0005
+        },
+        {
+          "name": "test_dot_resolves_to_base_is_rejected",
+          "outcome": "passed",
+          "duration": 0.0005
+        },
+        {
+          "name": "test_empty_path_is_rejected",
+          "outcome": "passed",
+          "duration": 0.0005
+        },
+        {
+          "name": "test_climb_to_base_via_dotdot_is_rejected",
+          "outcome": "passed",
+          "duration": 0.0004
+        },
+        {
+          "name": "test_symlink_to_external_file_is_rejected",
+          "outcome": "passed",
+          "duration": 0.0005
+        },
+        {
+          "name": "test_null_byte_does_not_leak",
+          "outcome": "passed",
+          "duration": 0.0004
+        },
+        {
+          "name": "test_agent_directory_exists",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_app_directory_exists",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_requirements_txt_exists",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_pretty_json_is_minified",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_minified_json_round_trips",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_non_json_passes_through_unchanged",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_already_compact_json_is_stable",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_unicode_is_preserved_not_escaped",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_short_text_is_unchanged",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_oversized_text_is_truncated_with_marker",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_truncation_prefers_a_clean_boundary",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_default_cap_is_modest",
+          "outcome": "passed",
+          "duration": 0.0002
+        }
+      ]
+    },
+    {
+      "name": "Server Tests",
+      "marker": "server",
+      "total": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "score": 0.0,
+      "tests": []
+    },
+    {
+      "name": "Agent Tests",
+      "marker": "agent_tests",
+      "total": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "score": 100.0,
+      "tests": [
+        {
+          "name": "test_invoke_with_fallback_primary_success",
+          "outcome": "passed",
+          "duration": 0.0023
+        },
+        {
+          "name": "test_invoke_with_fallback_no_fallback_raises",
+          "outcome": "passed",
+          "duration": 0.0018
+        },
+        {
+          "name": "test_stream_no_tools_injects_notice",
+          "outcome": "passed",
+          "duration": 0.0013
+        },
+        {
+          "name": "test_get_model_name_returns_string",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_fallback_model_name_returns_string",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_temperature_returns_float",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_thread_ttl_seconds_returns_positive_int",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_summarization_trigger_tokens_returns_positive_int",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_summarization_model_name_returns_string",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_system_prompt_contains_greeting",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_system_prompt_mentions_tool",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_agent_response_completed",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_agent_response_error",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_agent_response_input_required",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_run_agent_returns_response",
+          "outcome": "passed",
+          "duration": 0.0012
+        },
+        {
+          "name": "test_invoke_returns_completed",
+          "outcome": "passed",
+          "duration": 0.0008
+        },
+        {
+          "name": "test_invoke_returns_error_on_failure",
+          "outcome": "passed",
+          "duration": 0.0027
+        },
+        {
+          "name": "test_good_morning",
+          "outcome": "passed",
+          "duration": 0.0098
+        },
+        {
+          "name": "test_good_afternoon",
+          "outcome": "passed",
+          "duration": 0.0027
+        },
+        {
+          "name": "test_good_evening",
+          "outcome": "passed",
+          "duration": 0.0021
+        },
+        {
+          "name": "test_good_night",
+          "outcome": "passed",
+          "duration": 0.0033
+        },
+        {
+          "name": "test_fallback_on_exception",
+          "outcome": "passed",
+          "duration": 0.0011
+        },
+        {
+          "name": "test_agent_greeting_flow",
+          "outcome": "passed",
+          "duration": 0.0013
+        },
+        {
+          "name": "test_agent_stream_yields_response",
+          "outcome": "passed",
+          "duration": 0.0009
+        },
+        {
+          "name": "test_agent_error_handling",
+          "outcome": "passed",
+          "duration": 0.0015
+        },
+        {
+          "name": "test_get_mcp_tools_returns_empty_when_no_mock_file",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_get_mcp_tools_handles_invalid_json",
+          "outcome": "passed",
+          "duration": 0.0017
+        },
+        {
+          "name": "test_get_mcp_tools_returns_list_in_test_mode",
+          "outcome": "passed",
+          "duration": 0.0004
+        },
+        {
+          "name": "test_set_and_get_user_token",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_user_sub_returns_unknown_in_test_mode_without_token",
+          "outcome": "passed",
+          "duration": 0.0002
+        },
+        {
+          "name": "test_get_user_sub_decodes_valid_jwt",
+          "outcome": "passed",
+          "duration": 0.0003
+        },
+        {
+          "name": "test_reset_user_token_restores_previous_value",
+          "outcome": "passed",
+          "duration": 0.0002
+        }
+      ],
+      "coverage": 70.27
+    }
+  ]
+}
